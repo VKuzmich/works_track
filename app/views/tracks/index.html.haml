@@ -1,4 +1,4 @@
 
 - @tracks.each do |track|
-  %h2= link_to track.date, track
+  %h2= link_to track.date.strftime("%A %B %d"), track
   %h2= track.track
