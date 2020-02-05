@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Works Track Application
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %nav.navbar.navbar-default
+      .container
+        .navbar-header
+          = link_to "Works Track", root_path, class: "navbar-brand"
+        .nav.navbar-nav.navbar-right
+          = link_to "New Track", new_track_path, class: "navbar navbar-link"
+    .container
+      = yield
