@@ -4,6 +4,13 @@
 	%p= @track.condition
 	%p= @track.length
 
+#exercises
+	%h2 Exercises
+	= render @track.exercises
+
+	%h3 Add an exercises
+	= render "exercises/form"
+
 = link_to "Back", root_path
 |
 = link_to "Edit", edit_track_path(@track)
