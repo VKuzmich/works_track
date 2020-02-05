@@ -26,11 +26,16 @@ class TracksController < ApplicationController
   end
 
   def update
-
+    if @track.update(track_params)
+      redirect_to @track
+    else
+      render 'edit'
+    end
   end
 
   def destroy
-
+    @track.destroy
+    redirect_to root_path
   end
 
   private
