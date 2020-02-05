@@ -2,6 +2,7 @@ class TracksController < ApplicationController
   before_action :find_track, only: [:show, :edit, :update, :destroy]
 
   def index
+    @tracks = Track.all.order('created_at DESC')
   end
 
   def show
